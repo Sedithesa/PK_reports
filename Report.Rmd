@@ -8,15 +8,22 @@ output: pdf_document
 ```{r, include=FALSE}
 require(xpose4)
 
-setwd("C:/Users/Billy_XPS/Documents/Werk/5. Prednisolon/NM/NONMEM3")
+knitr::opts_chunk$set(comment = NA) # removes ## from rows
+
 ```
 
 \newpage
 
-## Gettings started
-Working directory of nonmem analysis:
+## Getting started
+
+Working directory of NONMEM analysis: `r getwd()`
+
+Or with code block but this adds row numbers:
 
 ```{r echo=FALSE}
+
+setwd("C:/Users/Billy_XPS/Documents/Werk/5. Prednisolon/NM/NONMEM3")
 getwd()
+
 
 ```

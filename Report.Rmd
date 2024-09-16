@@ -1,8 +1,18 @@
 ---
-title: "PK Report"
+title: "*PK Report*"
 author: "S.D.T. Sassen"
-date: "2024-09-11"
-output: pdf_document
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: 
+  pdf_document:
+    toc: false
+    toc_depth: 2
+    number_section: true
+    df_print: kable
+    citation_package: natbib
+    latex_engine: xelatex
+fontsize: 11pt
+geometry: margin=1in
+
 ---
 
 ```{r, include=FALSE}
@@ -14,16 +24,31 @@ knitr::opts_chunk$set(comment = NA) # removes ## from rows
 
 \newpage
 
-## Getting started
+\section{Getting started}
+
+## Alternative for section '##' 
 
 Working directory of NONMEM analysis: `r getwd()`
+
+\vspace{12pt} 
 
 Or with code block but this adds row numbers:
 
 ```{r echo=FALSE}
 
-setwd("C:/Users/Billy_XPS/Documents/Werk/5. Prednisolon/NM/NONMEM3")
+#setwd("C:/Users/Billy_XPS/Documents/Werk/5. Prednisolon/NM/NONMEM3")
 getwd()
 
 
 ```
+
+\section{nog een}
+
+\subsection{subsection}
+
+```{r echo=FALSE}
+iris2 <- head(iris)
+# left, center, center, right, right
+knitr::kable(iris2, align = "lccrr", caption = "An example table caption.",, col.names = gsub("[.]", " ", names(iris)))
+```
+

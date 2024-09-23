@@ -1,0 +1,25 @@
+---
+title: "PK_report_template"
+author: "S.D.T.Sassen"
+date: "2024-09-23"
+output: 
+  pdf_document:
+    toc: false
+    toc_depth: 2
+    number_section: true
+    df_print: kable
+    citation_package: natbib
+    latex_engine: xelatex
+fontsize: 11pt
+geometry: margin=1in
+
+---
+
+```{r, include=FALSE}
+require(xpose4)
+
+knitr::opts_chunk$set(comment = NA) # removes ## from rows
+
+```
+
+\newpage

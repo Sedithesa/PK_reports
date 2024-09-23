@@ -1,5 +1,5 @@
 ---
-title: "PK_report_template"
+title: "PK report template"
 author: "S.D.T.Sassen"
 date: "2024-09-23"
 output: 
@@ -20,6 +20,19 @@ require(xpose4)
 
 knitr::opts_chunk$set(comment = NA) # removes ## from rows
 
+knitr::opts_knit$set(root.dir = 'C:/Users/sebas/Documents/R/PK_reports/nm_example/')
+
 ```
 
 \newpage
+
+```{r, include=FALSE}
+require(nmdata)
+
+x <- nmdata::extract('001')
+
+# print(x)
+
+```
+
+Check if it works in line. The condintion nr is `r x$cond_nr`
